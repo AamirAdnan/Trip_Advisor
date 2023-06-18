@@ -49,5 +49,5 @@ if affordable_destinations:
     for city in affordable_destinations:
         print(city.capitalize())
 else:
-    print("Unfortunately, your budget does not allow you to visit any of the listed destinations.")
+    print("Unfortunately, your budget does not allow you to visit any of the listed destinations.") 
 
