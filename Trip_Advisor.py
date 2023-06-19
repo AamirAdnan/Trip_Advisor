@@ -1,8 +1,8 @@
-def calculate_cost(flight, hotel, car, duration=7):
+def cost(flight, hotel, car, duration=7):
     total_cost = flight + hotel * duration + car * duration
     return total_cost
 
-def get_most_expensive_city(paris_cost, london_cost, dubai_cost, mumbai_cost):
+def most_expensive_city(paris_cost, london_cost, dubai_cost, mumbai_cost):
     cities = ["paris", "london", "dubai", "mumbai"]
     costs = [paris_cost, london_cost, dubai_cost, mumbai_cost]
     most_expensive_city = cities[costs.index(max(costs))]
@@ -22,10 +22,10 @@ def suggest_destinations(budget, paris_cost, london_cost, dubai_cost, mumbai_cos
 
 choice = input("Enter the city you want to visit: ").lower()
 
-paris_cost = calculate_cost(flight=200, hotel=20, car=28.5)
-london_cost = calculate_cost(flight=250, hotel=30, car=17.1)
-dubai_cost = calculate_cost(flight=370, hotel=15, car=80)
-mumbai_cost = calculate_cost(flight=450, hotel=10, car=70)
+paris_cost = cost(flight=200, hotel=20, car=28.5)
+london_cost = cost(flight=250, hotel=30, car=17.1)
+dubai_cost = cost(flight=370, hotel=15, car=80)
+mumbai_cost= cost(flight=450, hotel=10, car=70)
 
 if choice == "paris":
     print("The cost of visiting Paris for one week is:", paris_cost)
@@ -38,7 +38,7 @@ elif choice == "mumbai":
 else:
     print("Please choose a city from the following: Paris, London, Dubai, Mumbai")
 
-most_expensive_city = get_most_expensive_city(paris_cost, london_cost, dubai_cost, mumbai_cost)
+most_expensive_city = most_expensive_city(paris_cost, london_cost, dubai_cost, mumbai_cost)
 print("The most expensive city to visit is:", most_expensive_city)
 
 budget = int(input("What is your budget? "))
